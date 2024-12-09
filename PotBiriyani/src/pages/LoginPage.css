@@ -1,0 +1,52 @@
+.login-Btn {
+    background-color: #ffbf00;
+    color: black;
+}
+.login-container1 {
+    background-color: rgba(33, 47, 61, 0.9); /* 0.8 controls the transparency */
+}
+
+.login-container-main {
+    background-image: url("../contexts/img/loginbg1.jpg");
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+/* Add this to your CSS file */
+
+.custom-checkbox {
+    display: none; /* Hide the default checkbox */
+}
+
+.custom-checkbox + label {
+    position: relative;
+    padding-left: 1.5em; /* Space for the custom checkbox */
+    cursor: pointer;
+}
+
+.custom-checkbox + label:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1em;
+    height: 1em;
+    border: 2px solid #f9d44d; /* Yellow border */
+    background-color: transparent; /* Background color */
+    border-radius: 4px; /* Rounded corners */
+}
+
+.custom-checkbox:checked + label:before {
+    background-color: #f9d44d; /* Yellow when checked */
+    border-color: #f9d44d; /* Yellow border */
+}
+
+.custom-checkbox:checked + label:after {
+    content: "✔"; /* Checkmark symbol */
+    position: absolute;
+    left: 0.2em;
+    top: -0.2em;
+    color: white; /* Color of checkmark */
+    font-size: 1.2em; /* Size of checkmark */
+}

@@ -1,0 +1,56 @@
+.chatbot-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.tab {
+    flex: 1;
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.tab.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.content {
+    border: 1px solid #ddd;
+    padding: 20px;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+}
+
+.option {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.option:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.response {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #007bff;
+    background-color: #f0f8ff;
+}

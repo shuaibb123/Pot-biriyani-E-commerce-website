@@ -1,0 +1,926 @@
+/********** Template CSS **********/
+* {
+    cursor: pointer;
+}
+:root {
+    --primary: #febf61;
+    --light: #f1f8ff;
+    --dark: #0f172b;
+}
+
+.ff-secondary {
+    font-family: "Pacifico", cursive;
+}
+
+.fw-medium {
+    font-weight: 600 !important;
+}
+
+.fw-semi-bold {
+    font-weight: 700 !important;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 45px;
+    bottom: 45px;
+    z-index: 99;
+}
+
+/*** Spinner ***/
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition:
+        opacity 0.5s ease-out,
+        visibility 0s linear 0.5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition:
+        opacity 0.5s ease-out,
+        visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+/*** Button ***/
+.btn {
+    font-family: "Nunito", sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+.btn.btn-primary,
+.btn.btn-secondary {
+    color: black;
+}
+
+.btn-square {
+    width: 38px;
+    height: 38px;
+}
+
+.btn-sm-square {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-lg-square {
+    width: 48px;
+    height: 48px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    border-radius: 2px;
+}
+
+/*** Hero Header ***/
+.hero-header {
+    background: linear-gradient(
+            rgba(255, 255, 255, 0.9) 0%,
+            transparent 0% /* Transparent at 100% */
+        ),
+        url("../contexts/img/biryani_lounge_banner.jpg"); /* Ensure the path is correct */
+    background-position: right center; /* Position the image to the right */
+    background-repeat: no-repeat;
+    background-size: cover; /* Adjust size to cover the container */
+    height: 100vh; /* Ensure the container has height */
+}
+
+.hero-header img {
+    animation: imgRotate 50s linear infinite;
+}
+
+@keyframes imgRotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/*** Section Title ***/
+.section-title {
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::before {
+    position: absolute;
+    content: "";
+    width: 45px;
+    height: 2px;
+    top: 50%;
+    left: -55px;
+    margin-top: -1px;
+    background: var(--primary);
+}
+
+.section-title::after {
+    position: absolute;
+    content: "";
+    width: 45px;
+    height: 2px;
+    top: 50%;
+    right: -55px;
+    margin-top: -1px;
+    background: var(--primary);
+}
+
+.section-title.text-start::before,
+.section-title.text-end::after {
+    display: none;
+}
+
+/*** Food Menu ***/
+.nav-pills .nav-item .active {
+    border-bottom: 2px solid var(--primary);
+}
+
+.main-container {
+    max-width: 1200px; /* Set maximum width */
+    margin: auto; /* Center horizontally */
+    padding: 30px; /* Padding inside the container */
+    position: relative;
+    overflow: hidden;
+    background: hsl(20, 100%, 99%); /* Main container background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.3s ease; /* Smooth transition for hover effects */
+    text-align: center; /* Center-align text within the container */
+}
+
+.main-container:hover {
+    transform: scale(1.01); /* Slightly enlarge on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow depth on hover */
+}
+
+.service-item,
+.team-item {
+    padding: 0px; /* Add padding for inner spacing */
+    margin: 0; /* Remove margin if needed */
+    box-shadow: 0 0 45px rgba(0, 0, 0, 0.08); /* Box shadow for items */
+    transition: 0.5s;
+}
+
+.service-item:hover,
+.team-item:hover {
+    background: black;
+}
+
+.service-item h5,
+.service-item h1 {
+    color: white;
+}
+
+/* Container to ensure items are centered horizontally */
+.container-xxl {
+    width: 100%; /* Full width to use available space */
+    max-width: 1200px; /* Set a maximum width */
+    margin: 0 auto; /* Center horizontally */
+    padding: 0px; /* Padding inside the container */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center-align content horizontally */
+}
+
+/* Row should use flex to align children horizontally */
+.row {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap if necessary */
+    gap: 15px; /* Space between items */
+    margin: 0 -15px; /* Adjust margins to account for gap */
+}
+
+/* Columns should take equal width and adjust for smaller screens */
+.col-lg-3,
+.col-sm-6 {
+    flex: 1 1 calc(25% - 15px); /* Each column should take up 25% of the container width minus the gap */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+@media (max-width: 991.98px) {
+    .col-lg-3 {
+        flex: 1 1 calc(50% - 15px); /* Adjust columns for medium screens */
+    }
+}
+
+@media (max-width: 767.98px) {
+    .col-lg-3,
+    .col-sm-6 {
+        flex: 1 1 calc(100% - 15px); /* Full width for small screens */
+    }
+}
+
+/* Custom CSS */
+.section-heading {
+    font-size: 2.5rem; /* Increase font size */
+    font-weight: bold; /* Make text bold */
+    color: #333; /* Set text color */
+    margin-bottom: 0.1rem; /* Add some space below the heading */
+    margin-top: -4rem;
+}
+
+.section-subheading {
+    font-size: 1.5rem; /* Subheading size */
+    color: #666; /* Subheading color */
+    margin-bottom: 3rem; /* Add space below the subheading */
+}
+
+.section-title {
+    font-size: 250%;
+    margin-top: -50px;
+}
+
+/* Style for the card */
+.card {
+    position: relative;
+    overflow: hidden; /* Ensure content doesn't overflow */
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease; /* Smooth transition for hover effects */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+}
+
+/* Adjust the card image to fit the container */
+.card-img-top {
+    object-fit: cover;
+    height: 200px; /* Set a fixed height for the image */
+    transition: transform 0.3s ease; /* Smooth transition for image scaling */
+}
+
+/* Hover effect for the image */
+.card:hover .card-img-top {
+    transform: scale(1.1); /* Enlarge the image on hover */
+}
+
+/* Overlay effect */
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Smooth transition for overlay visibility */
+}
+
+.card:hover .card-overlay {
+    opacity: 1; /* Make overlay visible on hover */
+}
+
+/* Make sure the card body takes the remaining space */
+.card-body {
+    flex: 1; /* Allow the card body to grow and fill the remaining space */
+}
+
+/*** Testimonial ***/
+.testimonial-carousel .owl-item .testimonial-item,
+.testimonial-carousel .owl-item.center .testimonial-item * {
+    transition: 0.5s;
+}
+
+.testimonial-carousel .owl-item.center .testimonial-item {
+    background: var(--primary) !important;
+    border-color: var(--primary) !important;
+}
+
+.testimonial-carousel .owl-item.center .testimonial-item * {
+    color: var(--light) !important;
+}
+
+.testimonial-carousel .owl-dots {
+    margin-top: 24px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.testimonial-carousel .owl-dot {
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 15px;
+    transition: 0.5s;
+}
+
+.testimonial-carousel .owl-dot.active {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+/* Ensure the slider takes full width and centers it */
+.slick-slider {
+    width: 80%; /* Adjust width as needed */
+    margin: auto;
+}
+
+/* Ensure there is space between slides */
+.slick-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px; /* Increase horizontal padding to create more space between slides */
+}
+
+/* Center slide styling */
+.slick-slide.slick-center .testimonial-item {
+    background-color: orange !important; /* Ensure the center slide has an orange background */
+    transform: scale(1.1); /* Slightly enlarge the center slide */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow to highlight */
+    transition:
+        background-color 0.3s,
+        transform 0.3s; /* Smooth transition for background color and scaling */
+}
+
+/* Styling for slick arrows */
+.slick-prev,
+.slick-next {
+    font-size: 24px;
+    color: #333;
+    z-index: 1;
+}
+
+/* Styling for previous arrow */
+.slick-prev {
+    left: 10px; /* Adjust positioning if needed */
+}
+
+/* Styling for next arrow */
+.slick-next {
+    right: 10px; /* Adjust positioning if needed */
+}
+
+/* Hover effect for arrows */
+.slick-prev:hover,
+.slick-next:hover {
+    color: #007bff; /* Change color on hover */
+    transform: scale(1.2); /* Enlarge the arrow slightly */
+    transition:
+        color 0.3s,
+        transform 0.3s; /* Smooth transition */
+}
+
+/* Ensure the testimonial item is positioned properly */
+.testimonial-item {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease; /* Smooth transition for transform and box-shadow */
+    padding: 15px; /* Adjust padding */
+    border-radius: 8px; /* Rounded corners */
+    height: 300px; /* Adjust height to content */
+    max-height: 300px; /* Prevent excessive height */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Initial box shadow */
+    background-color: #fff; /* Background color */
+    position: relative; /* Ensure proper positioning */
+    display: flex; /* Flexbox to align content */
+    flex-direction: column; /* Arrange children vertically */
+    justify-content: space-between; /* Distribute space */
+    overflow: hidden; /* Prevent overflow */
+}
+
+/* Text styling */
+.testimonial-item p,
+.testimonial-item h5,
+.testimonial-item small {
+    margin: 0;
+    word-wrap: break-word; /* Ensure text does not overflow */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Add ellipsis for overflowing text */
+    white-space: normal; /* Allow text to wrap */
+}
+
+/* Hover effect for the testimonial item */
+.testimonial-item:hover {
+    transform: scale(1.05); /* Slightly enlarge the container */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .slick-slider {
+        width: 90%; /* Adjust width for medium screens */
+    }
+
+    .testimonial-item {
+        max-height: 250px; /* Adjust max height for medium screens */
+    }
+
+    .testimonial-item h5 {
+        font-size: 1.25rem; /* Adjust font size for headings */
+    }
+
+    .testimonial-item p {
+        font-size: 1rem; /* Adjust font size for paragraphs */
+    }
+
+    .testimonial-item small {
+        font-size: 0.875rem; /* Adjust font size for smaller text */
+    }
+}
+
+@media (max-width: 992px) {
+    .slick-slider {
+        width: 100%; /* Full width for large tablets and small desktops */
+    }
+
+    .testimonial-item {
+        max-height: 200px; /* Adjust max height for large tablets and small desktops */
+    }
+
+    .testimonial-item h5 {
+        font-size: 1.125rem; /* Adjust font size for headings */
+    }
+
+    .testimonial-item p {
+        font-size: 0.875rem; /* Adjust font size for paragraphs */
+    }
+
+    .testimonial-item small {
+        font-size: 0.75rem; /* Adjust font size for smaller text */
+    }
+
+    .slick-prev,
+    .slick-next {
+        font-size: 20px; /* Smaller arrow size for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .slick-slide {
+        padding: 0 10px; /* Decrease padding for smaller screens */
+    }
+
+    .testimonial-item {
+        max-height: 180px; /* Adjust max height for tablets and larger mobile devices */
+    }
+
+    .testimonial-item h5 {
+        font-size: 1rem; /* Adjust font size for headings */
+    }
+
+    .testimonial-item p {
+        font-size: 0.75rem; /* Adjust font size for paragraphs */
+    }
+
+    .testimonial-item small {
+        font-size: 0.625rem; /* Adjust font size for smaller text */
+    }
+
+    .slick-prev,
+    .slick-next {
+        font-size: 18px; /* Smaller arrow size for mobile devices */
+    }
+}
+
+@media (max-width: 576px) {
+    .testimonial-item {
+        max-height: 160px; /* Adjust max height for small mobile devices */
+    }
+
+    .testimonial-item h5 {
+        font-size: 0.875rem; /* Adjust font size for headings */
+    }
+
+    .testimonial-item p {
+        font-size: 0.625rem; /* Adjust font size for paragraphs */
+    }
+
+    .testimonial-item small {
+        font-size: 0.5rem; /* Adjust font size for smaller text */
+    }
+
+    .slick-prev,
+    .slick-next {
+        font-size: 16px; /* Smaller arrow size for small mobile devices */
+    }
+}
+
+.main-container2 {
+    max-width: 1200; /* Set maximum width */
+    margin: auto; /* Center horizontally */
+    padding: 30px; /* Padding inside the container */
+    position: relative;
+    overflow: hidden;
+    background: #191919; /* Main container background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.3s ease; /* Smooth transition for hover effects */
+    text-align: center; /* Center-align text within the container */
+}
+
+.main-container2:hover {
+    transform: scale(1.01); /* Slightly enlarge on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow depth on hover */
+}
+
+.custom-container {
+    max-width: 1160px; /* Adjust this value to control the width */
+    margin: 0 auto; /* Center align the container */
+    background: hsl(20, 100%, 99%); /* Main container background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.3s ease; /* Smooth transition for hover effects */
+    text-align: center; /* Center-align text within the container */
+}
+
+.custom-container:hover {
+    transform: scale(1.01); /* Slightly enlarge on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow depth on hover */
+}
+
+@media (max-width: 767.98px) {
+    .section-title {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+    }
+
+    .custom-container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media (min-width: 768px) {
+    .section-title {
+        font-size: 2rem; /* Adjust font size for medium and larger screens */
+    }
+}
+
+.service-section {
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s;
+}
+
+.service-section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    background: hsl(0, 0%, 100%); /* Main container background color */
+}
+
+/* Container for the section with a background image */
+.bg-image-container {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+}
+
+.bg-image {
+    background:
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.5), transparent 20%),
+        /* Top fade effect */
+            linear-gradient(to top, rgba(255, 255, 255, 0.5), transparent 20%),
+        /* Bottom fade effect */ url("../contexts/img/PotBiriyaniLogo.png"); /* Background image */
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Full height of the viewport */
+    width: 100%; /* Full width of the column */
+    margin-bottom: 40px;
+}
+
+.new-bg-image {
+    background:
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.5), transparent 20%),
+        /* Top fade effect */
+            linear-gradient(to top, rgba(255, 255, 255, 0.5), transparent 20%),
+        /* Bottom fade effect */ url("../contexts/img/PotPic.png"); /* Background image */
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Full height of the viewport */
+    width: 100%; /* Full width of the column */
+    margin-bottom: 40px;
+}
+
+.values-container {
+    background-color: #191919;
+}
+
+.text-warning {
+    color: white; /* Ensure the icon color is yellow */
+}
+
+/*        dfsdssdsfdsdfffdff   */
+.custom-section {
+    align-items: center;
+    background-color: #202020;
+    width: 90%;
+    margin: 50px auto;
+    border-radius: 10px;
+}
+
+.custom-heading {
+    text-decoration: none !important; /* Forces removal of underline */
+    margin: auto 50px;
+    width: 80%;
+    color: white; /* You can set any custom color here */
+    font-size: 2rem;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.custom-btn {
+    font-size: 0.875rem !important; /* Reduces the button size */
+    color: black !important; /* Sets the button text color */
+    border: none !important; /* Removes any border */
+    width: 30%;
+    border-radius: 10px;
+    height: 60px;
+    margin: auto 70px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #fedc34;
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    position: relative;
+    z-index: 1;
+}
+
+.custom-btn:hover {
+    animation: bling 0.6s ease-in-out; /* Apply the animation on hover */
+    background-color: #ffeb3b; /* Slight color change */
+    box-shadow:
+        0 0 15px rgba(255, 235, 59, 0.7),
+        0 0 5px rgba(255, 235, 59, 0.5);
+}
+
+/* Bling animation keyframes */
+@keyframes bling {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 5px rgba(255, 235, 59, 0);
+    }
+    50% {
+        transform: scale(1.1); /* Slight scale up */
+        box-shadow:
+            0 0 20px rgba(255, 235, 59, 0.8),
+            0 0 10px rgba(255, 235, 59, 0.6);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 5px rgba(255, 235, 59, 0);
+    }
+}
+
+/* Responsive adjustments */
+
+/* Medium screens (desktops, tablets) */
+@media (max-width: 992px) {
+    .custom-btn {
+        width: 40%; /* Increase width for medium screens */
+        height: 50px; /* Adjust button height */
+        font-size: 0.9rem; /* Adjust font size */
+        margin: auto 40px;
+    }
+}
+
+/* Small screens (large tablets, mobile devices) */
+@media (max-width: 768px) {
+    .custom-btn {
+        width: 50%; /* Full width for tablets */
+        height: 45px; /* Adjust button height */
+        font-size: 0.85rem; /* Adjust font size */
+        margin: auto 30px;
+    }
+}
+
+/* Extra small screens (mobile devices) */
+@media (max-width: 576px) {
+    .custom-btn {
+        width: 70%; /* Full width for mobile devices */
+        height: 40px; /* Adjust button height */
+        font-size: 0.75rem; /* Smaller font size for mobile */
+        margin: auto 20px;
+    }
+}
+
+.homepage-btn {
+    margin: auto;
+    background-color: #ffd700;
+    padding: 10px 40px;
+    border-radius: 10px;
+    color: black;
+}
+
+.homepage-btn2 {
+    background-color: #ffd700;
+    color: black;
+    border-radius: 5px;
+    padding: 20px 100px;
+}
+.menu-card-title {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+@keyframes glow-animation {
+    0% {
+        border-color: rgba(255, 204, 0, 0.5);
+    }
+    25% {
+        border-color: rgba(255, 204, 0, 0.8);
+    }
+    50% {
+        border-color: rgba(255, 204, 0, 1);
+    }
+    75% {
+        border-color: rgba(255, 204, 0, 0.8);
+    }
+    100% {
+        border-color: rgba(255, 204, 0, 0.5);
+    }
+}
+
+.description-container {
+    border-radius: 10px;
+    border: 2px solid rgba(255, 204, 0, 0.5); /* Initial border color */
+    background-color: transparent; /* Ensure background is transparent */
+    transition: transform 0.4s ease; /* Smooth transition for scaling */
+}
+
+.description-container:hover {
+    transform: scale(1.01); /* Slightly enlarge on hover */
+    animation: glow-animation 2.5s infinite; /* Start glowing animation with a slower duration */
+}
+
+/******************/
+
+/* Chatbot Icon */
+.unique-chatbot-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 100px;
+    height: 100px;
+    /*background-color: #ffd700;  Main button color */
+    color: black;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the content */
+    cursor: pointer;
+    /*box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Slightly darker shadow for depth */
+    transition:
+        background-color 0.3s,
+        transform 0.5s ease; /* Added transform for scale effect */
+    background-image: url("../contexts/img/chatbot.png"); /* Path to your image */
+    background-size: 60px; /* Size of the image */
+    background-repeat: no-repeat;
+    background-position: center; /* Center the image in the button */
+}
+
+.unique-chatbot-icon:hover {
+    transform: scale(1.1) translateY(-15px); /* Move up significantly */
+}
+
+.unique-chatbot-container {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 400px;
+    height: 500px; /* Increased height for better visibility */
+    border: 2px solid yellow;
+    border-radius: 10px;
+    background-color: #222; /* Darker background for the chatbot */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); /* Stronger shadow */
+    z-index: 1000;
+    display: flex;
+    flex-direction: column; /* Ensure children stack vertically */
+}
+
+.unique-chatbot-header {
+    background-color: #333; /* Darker header for contrast */
+    color: white;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.unique-close-chatbot {
+    background: none;
+    border: none;
+    color: red;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.unique-close-chatbot:hover {
+    color: #ff4d4d; /* Slight color change on hover */
+}
+
+.unique-chatbot-messages {
+    padding: 10px;
+    flex: 1; /* Allow messages area to take available space */
+    overflow-y: auto;
+    background-color: #222; /* Match container background */
+    border-bottom: 1px solid #444; /* Subtle border to separate header and messages */
+}
+
+.unique-chatbot-message {
+    margin: 5px 0;
+    padding: 10px; /* Increased padding for better touch targets */
+    border-radius: 5px;
+    max-width: 80%;
+    color: #222; /* Text color for better visibility */
+}
+
+.unique-chatbot-message.user {
+    background-color: #e1ffc7; /* User message color */
+    text-align: right; /* Align user messages to the right */
+    color: black;
+    margin-left: auto; /* Align user messages to the right */
+}
+
+.unique-chatbot-message.bot {
+    background-color: #fdda0d; /* Bot message color */
+    text-align: left; /* Align bot messages to the left */
+    color: black;
+}
+
+.unique-chatbot-input {
+    display: flex;
+    border-top: 1px solid #444; /* Darker border for input */
+    padding: 10px;
+    background-color: #333; /* Match input background with header */
+}
+
+.unique-chatbot-message.bot:hover {
+    background-color: #fcf55f; /* Match input background with header */
+    color: black;
+}
+
+.unique-chatbot-input-field {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #444; /* Darker input field for contrast */
+    color: white; /* Input text color */
+}
+
+.unique-chatbot-input-field::placeholder {
+    color: #aaa; /* Placeholder color */
+}
+
+.unique-send-button {
+    background-color: yellow;
+    color: black;
+    border: none;
+    padding: 10px 15px; /* Added horizontal padding */
+    margin-left: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.unique-send-button:hover {
+    background-color: #e5e500; /* Slightly darker on hover */
+}
+
+.unique-question-button {
+    background: none;
+    border: none;
+    color: black; /* Color for question buttons */
+    cursor: pointer;
+    font-weight: bold; /* Bold text for visibility */
+    transition: color 0.3s;
+}
+
+.unique-question-button:hover {
+    color: #0056b3; /* Darker blue on hover */
+}

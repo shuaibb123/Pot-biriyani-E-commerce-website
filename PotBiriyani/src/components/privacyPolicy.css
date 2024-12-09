@@ -1,0 +1,93 @@
+/* Container for the Privacy Policy */
+.privacy-policy-container {
+    padding: 2rem;
+    max-width: 900px; /* Increased width for better readability */
+    margin: 2rem auto; /* Center align the container with top and bottom margins */
+    background-color: #f9f9f9; /* Light grey background for a soft look */
+    border-radius: 12px; /* More pronounced rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Enhanced shadow for more depth */
+    border: 1px solid #e1e1e1; /* Light border for subtle definition */
+}
+
+h1 {
+    font-size: 2.5rem; /* Larger font size for main heading */
+    color: #333; /* Dark color for the main heading */
+    margin-bottom: 1.5rem; /* Increased space below the heading */
+    font-family: "Arial", sans-serif; /* Modern font for better readability */
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.75rem; /* Slightly larger than subheadings */
+    color: #007bff; /* Bright blue color for section headings */
+    margin-top: 1.5rem; /* Space above the section headings */
+    margin-bottom: 0.75rem; /* Space below the section headings */
+    border-bottom: 2px solid #007bff; /* Blue underline for section headings */
+    padding-bottom: 0.5rem; /* Space between text and underline */
+    font-family: "Arial", sans-serif; /* Consistent font family */
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.5rem; /* Subheading size */
+    color: #555; /* Medium grey color for subheadings */
+    margin-top: 1.25rem; /* Space above the subheadings */
+    margin-bottom: 0.75rem; /* Space below the subheadings */
+    font-family: "Arial", sans-serif; /* Consistent font family */
+    font-weight: bold;
+}
+
+p {
+    font-size: 1.125rem; /* Slightly larger text size for readability */
+    color: #333; /* Dark color for text */
+    line-height: 1.8; /* Line height for better readability */
+    margin-bottom: 1.25rem; /* Increased space below paragraphs */
+    font-family: "Arial", sans-serif; /* Consistent font family */
+}
+
+ul {
+    list-style-type: disc; /* Disc bullets for lists */
+    padding-left: 2.5rem; /* Indentation for list items */
+    margin-bottom: 1.5rem; /* Increased space below lists */
+}
+
+li {
+    font-size: 1.125rem; /* Slightly larger text size for list items */
+    color: #333; /* Dark color for list items */
+    margin-bottom: 0.75rem; /* Increased space below list items */
+}
+
+strong {
+    color: #000; /* Bold text color for emphasis */
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    /* Responsive design adjustments for smaller screens */
+    .privacy-policy-container {
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    p,
+    li {
+        font-size: 1rem;
+    }
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}

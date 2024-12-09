@@ -1,0 +1,76 @@
+.list-group-item {
+    background-color: #202020; /* Set background to dark grey */
+    border: 2px solid yellow; /* Add yellow border */
+    color: white; /* Ensure text color is readable */
+    padding: 15px;
+    border-radius: 8px; /* Optional: slightly round the edges */
+    margin-top: 20px; /* Space between list items */
+    margin-left: 55px;
+    margin-right: 55px;
+}
+
+.list-group-item h5,
+.list-group-item p {
+    color: white; /* Keep the text color white for readability */
+}
+
+.cart-item-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 2px solid yellow; /* Add yellow border around the image to match the theme */
+}
+
+.quantity-btn {
+    border: none;
+    color: black;
+    background-color: yellow; /* Change button color to match the theme */
+    font-size: 16px;
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition:
+        background-color 0.3s,
+        color 0.3s;
+}
+
+.quantity-btn:hover {
+    background-color: lightyellow; /* Change hover background to light yellow */
+    color: black; /* Text color stays black for contrast */
+}
+
+.cart-title {
+    margin-top: 30px;
+    font-size: 2rem; /* Adjust font size for title */
+}
+
+.total-price-container h3 {
+    margin: auto;
+    width: 100%;
+    align-content: center;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white; /* Set total price text color to white */
+}
+
+.checkout-btn,
+.clear-cart-btn {
+    color: white;
+    text-align: center;
+    padding: 12px 24px;
+    width: 100%; /* Full-width for the button */
+    max-width: 300px; /* Limit the max width */
+    font-size: 1.25rem;
+    margin: 10px auto; /* Center the button horizontally with auto margin */
+    display: block; /* Make the button take the block display to center properly */
+}
+
+/* Container for buttons to be centered */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

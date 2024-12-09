@@ -1,0 +1,27 @@
+[
+    {
+      "name": "Dish 1",
+      "description": "Delicious dish 1",
+      "price": "$10",
+      "image": "/pic1.png"
+    },
+    {
+      "name": "Dish 2",
+      "description": "Delicious dish 2",
+      "price": "$15",
+      "image": "/pic2.png"  
+    },
+    {
+      "name": "Dish 2",
+      "description": "Delicious dish 2",
+      "price": "$15",
+      "image": "/pic3.png"    
+    },
+    {
+      "name": "Dish 2",
+      "description": "Delicious dish 2",
+      "price": "$15",
+      "image": "/pic4.png"    
+    }
+  ]
+  

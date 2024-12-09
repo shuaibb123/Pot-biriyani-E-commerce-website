@@ -1,0 +1,123 @@
+.navbar {
+    margin: 20px auto;
+    max-width: 90%;
+    background-color: rgba(51, 51, 51, 0.8); /* #333333 with 80% opacity */
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+    transform: translateY(0);
+    opacity: 1;
+    border-radius: 15px; /* Keeps the rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: light shadow for depth */
+}
+
+.navbar.hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.logo-margin {
+    margin-left: 40px; /* Adjust if needed to align with navbar items */
+}
+
+.navbar-brand {
+    margin-right: auto; /* Pushes the logo to the left */
+    color: #ffffff; /* White logo text */
+}
+
+.navbar-toggler {
+    border-radius: 50%; /* Optional: If you want to make the hamburger menu button circular */
+    border-color: #ffffff; /* White border for better visibility */
+}
+
+.navbar-collapse {
+    flex-grow: 1; /* Allow navbar items to grow and occupy available space */
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center; /* Center the nav items */
+    flex-grow: 1; /* Allow navbar-nav to take available space */
+    margin: 0; /* Remove default margin */
+}
+
+.nav-item.nav-link {
+    margin: 0 15px; /* Adjust space between items */
+    color: #ffffff; /* White nav links */
+    transition: color 0.3s ease; /* Smooth transition for text color */
+}
+
+.nav-link:hover {
+    border-radius: 5px;
+    color: #ffcc00; /* Gold hover effect */
+    background-color: #444444; /* Darker gray on hover */
+    transition: background-color 0.8s ease; /* Smooth transition for background color */
+}
+
+/* Updated button styles */
+.btn.btn-primary {
+    color: #ffffff; /* White text */
+    background-color: #ffcc00; /* Gold button */
+    border-color: #ffcc00; /* Matching border */
+    margin: 15px 15px; /* Adjust margin to push button */
+}
+
+.btn.btn-primary:hover {
+    color: #000000; /* Black text on hover */
+    background-color: #ffffff; /* White background on hover */
+    border-color: #ffcc00; /* Keep gold border on hover */
+}
+
+.btn.btn-outline-dark {
+    color: #ffffff; /* White text for outline button */
+    border-color: #ffcc00; /* Gold border color */
+    border-radius: 30%; /* Circular border radius */
+}
+
+.btn.btn-outline-dark:hover {
+    color: #ffcc00; /* Gold text on hover */
+    background-color: #000000; /* Black background on hover */
+    border-color: #ffcc00; /* Keep gold border on hover */
+}
+
+.navbar .btn-primary.regButton {
+    border-radius: 4px; /* Slight curve for the border */
+    background-color: #ffcc00; /* Gold button for registration */
+    color: #000000; /* Black text */
+}
+
+.navbar .btn-primary.regButton:hover {
+    background-color: #ffffff; /* White background on hover */
+    color: #000000; /* Black text */
+    border-color: #ffcc00; /* Gold border on hover */
+}
+
+/* Shopping Cart Badge */
+.btn.btn-outline-dark .badge {
+    background-color: #ffcc00; /* Gold badge background */
+    color: #000000; /* Black text inside the badge */
+    border-radius: 50%; /* Rounded badge */
+    font-weight: bold; /* Make the text bold */
+    font-size: 0.85rem; /* Slightly smaller text size */
+    padding: 5px 8px; /* Adjust padding for better appearance */
+    border: 2px solid #ffffff; /* Optional: Add a white border around the badge for contrast */
+}
+
+/* Custom Logo */
+.custom-logo {
+    color: #ffcc00; /* Gold text color */
+    font-size: 2rem; /* Font size for the brand name */
+}
+
+.custom-logo i {
+    color: #ffcc00; /* Gold icon color */
+}

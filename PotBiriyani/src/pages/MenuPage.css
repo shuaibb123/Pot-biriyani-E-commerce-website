@@ -1,0 +1,152 @@
+body {
+    background-color: black; /* Set the whole body background to black */
+    color: white; /* Set default text color to white for better readability */
+}
+
+.container-xxl {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.card {
+    text-align: center;
+    background-color: #222; /* Darker card background for contrast */
+}
+
+.card-body {
+    padding: 1rem;
+    color: white; /* Set text color in card body to white */
+}
+
+.card-title {
+    color: white; /* Set card title text color to white */
+}
+
+.card-text {
+    color: white; /* Set card text color to white */
+}
+
+.card-price {
+    color: white; /* Set card price color to white */
+}
+
+.btn-primary {
+    background-color: #007bff; /* Button primary color */
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Button hover color */
+    border-color: #0056b3;
+}
+
+.text-light {
+    color: #ffffff; /* Light text color */
+}
+
+.section-title {
+    font-size: 2rem; /* Adjust to a larger size */
+    color: #ffcc00; /* Optional: Change color to something more vibrant */
+}
+
+.section-subheading {
+    font-size: 1.5rem; /* Increase the font size for the subheading as well */
+    color: #ffffff;
+}
+
+.menuBtn {
+    margin: auto;
+    background-color: #ffd800;
+    color: black;
+    padding: 10px 40px;
+    border-radius: 5px;
+}
+
+.react-hot-toast {
+    background-color: black !important; /* Set background to black */
+    color: white !important; /* Set text color to white for readability */
+    border: 1px solid #ffffff; /* Optional: Add a white border */
+}
+
+.react-hot-toast.success {
+    background-color: black !important; /* Ensure success toasts also use black */
+}
+.menu-card-body {
+    padding: 20px 0px;
+}
+.menu-card-title {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+/* Styles for the menu search and sort controls */
+/* Styles for the menu search and sort controls */
+.menu-search-sort-container {
+    display: flex;
+    flex-direction: column; /* Change to column layout */
+    align-items: flex-start; /* Align items to the start */
+    margin-bottom: 1.5rem; /* Space below the controls */
+}
+
+/* Style the button */
+.menu-search-sort-container {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    margin: 1rem 0; /* Margin above and below the container */
+}
+
+.menu-search-sort-button {
+    width: 100%; /* Full width for the button */
+    padding: 0.75rem; /* Padding inside the button */
+    background-color: #ffc107; /* Gold background color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1.3rem;
+    color: white; /* White text color */
+    font-weight: bold;
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+/* Change background color on hover */
+.menu-search-sort-button:hover {
+    background-color: #f39c12; /* Darker gold on hover */
+}
+
+/* Style the search input */
+.menu-search-input {
+    width: 100%; /* Full width for the input */
+    color: black;
+    margin-bottom: 1rem; /* Space below the input */
+    padding: 0.75rem; /* Padding inside the input */
+    border: 5px solid #ffc107; /* Gold border */
+    background-color: black;
+    border-radius: 5px; /* Rounded corners */
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+/* Change border color on focus */
+.menu-search-input:focus {
+    outline: none; /* Remove default outline */
+    color: white;
+}
+
+/* Style the select dropdown */
+.menu-sort-select {
+    width: 50%; /* Full width for the select */
+    padding: 0.75rem; /* Padding inside the select */
+    border: 2px solid #ffc107; /* Gold border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: black;
+    color: white;
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+/* Change border color on focus */
+.menu-sort-select:focus {
+    border-color: #f39c12; /* Darker gold on focus */
+    outline: none; /* Remove default outline */
+}
+.menu-search-sort-section {
+    margin-bottom: 60px;
+}

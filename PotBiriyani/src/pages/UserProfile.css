@@ -1,0 +1,485 @@
+/* User Profile Container */
+.user-profile {
+    display: flex;
+    height: 100vh;
+    flex-direction: row;
+    background-color: white;
+}
+
+/* Sidebar Styles */
+.user-profile-sidebar {
+    width: 250px;
+    background-color: black;
+    padding: 20px;
+    border-right: 1px solid #dee2e6;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-profile-sidebar .btn {
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+    background-color: #191970;
+    border: none;
+    border-radius: 4px;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.user-profile-sidebar .btn:hover {
+    background-color: #e9ecef;
+    color: #007bff;
+}
+/* Content Area Styles */
+.content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* Section Styles */
+.profile-section,
+.settings-section,
+.shipping-section {
+    margin-bottom: 1rem;
+    transition: none; /* Remove transition for sections */
+    box-shadow: none; /* Remove shadow for sections */
+}
+
+/* Profile Card Styles */
+.profile-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Add margin-bottom to separate from other content */
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Alert Styles */
+.alert {
+    border-radius: 0.25rem;
+    padding: 0.75rem 1.25rem;
+    margin-top: 10px;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
+
+/* Card Body Padding */
+.card-body {
+    padding: 20px;
+}
+
+/* Profile Card Image */
+.profile-card img.profile-image {
+    border-radius: 50%;
+}
+
+/* Settings Button Margin */
+.settings-buttons .btn {
+    margin-right: 10px;
+}
+
+/* Adding space between the Logout and Delete buttons */
+.settings-buttons .btn-logout {
+    margin-bottom: 20px; /* Add space below Logout button */
+}
+
+/* Card Styling with Hover Effect */
+.card {
+    transition: all 0.3s ease; /* Smooth transition for all changes */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Initial shadow */
+    border: 1px solid #dee2e6; /* Optional: Add border if needed */
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    transform: translateY(-4px); /* Lift the card slightly */
+}
+
+/* Ensure Specific Card Sections Have the Same Effect */
+.profile-section.card,
+.settings-section.card,
+.shipping-section.card {
+    transition: all 0.3s ease; /* Smooth transition for all changes */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Initial shadow */
+    border: 1px solid #dee2e6; /* Optional: Add border if needed */
+}
+
+.profile-section.card:hover,
+.settings-section.card:hover,
+.shipping-section.card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    transform: translateY(-4px); /* Lift the card slightly */
+}
+
+/* Base styles (kept as is) */
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    /* Adjust sidebar and content area for medium-sized screens */
+    .user-profile {
+        flex-direction: column;
+        height: auto;
+    }
+
+    /* Sidebar should take full width on smaller screens */
+    .user-profile-sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #dee2e6;
+        flex-direction: row;
+        overflow-x: auto;
+        padding: 10px;
+    }
+
+    .user-profile-sidebar .btn {
+        font-size: 14px;
+        padding: 8px 10px;
+        margin-bottom: 8px;
+    }
+
+    /* Content area adjustments */
+    .content {
+        padding: 15px;
+        flex-grow: 1;
+    }
+
+    /* Profile card adjustments */
+    .profile-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-info > p {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .profile-image {
+        margin-bottom: 15px;
+        margin-right: 0;
+    }
+
+    /* Form adjustments */
+    .update-form,
+    .update-form-pswd {
+        width: 90%;
+        margin: 0 auto;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Smaller tablet and mobile adjustments */
+
+    .user-profile-sidebar .btn {
+        font-size: 12px;
+        padding: 6px 8px;
+    }
+
+    .profile-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    /* Update form adjustments */
+    .update-form,
+    .update-form-pswd {
+        width: 100%;
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+    /* Card and section padding adjustments */
+    .profile-section,
+    .settings-section,
+    .orders-section,
+    .shipping-section {
+        margin-bottom: 15px;
+    }
+
+    .section-title {
+        font-size: 1.25rem;
+        margin-bottom: 0.75rem;
+    }
+
+    /* Adjust section content padding for smaller screens */
+    .shipping-details p,
+    .orders-section-list-group-item {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Further adjustments for very small screens */
+
+    .user-profile-sidebar .btn {
+        font-size: 10px;
+        padding: 4px 6px;
+    }
+
+    .profile-image {
+        width: 80px;
+        height: 80px;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    /* Further shrinking card body padding */
+    .card-body {
+        padding: 10px;
+    }
+
+    /* Profile card adjustments for small screens */
+    .profile-card {
+        margin-bottom: 15px;
+    }
+
+    .profile-info > p {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    /* Adjust button sizes for mobile */
+    .profile-Btn,
+    .lg-settings-Btn,
+    .del-settings-Btn {
+        width: auto;
+        padding: 5px 10px;
+        font-size: 0.9rem;
+    }
+
+    /* Adjust section content font sizes */
+    .shipping-details p,
+    .orders-section-list-group-item {
+        font-size: 0.9rem;
+    }
+}
+
+/* Keep original styles for larger screens */
+
+/* Additional User Profile Container and Sidebar Adjustments */
+.user-profile {
+    display: flex;
+}
+
+.content {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.profile-section,
+.settings-section,
+.orders-section,
+.shipping-section {
+    margin-bottom: 20px;
+}
+
+.profile-section .profile-card,
+.settings-container,
+.orders-section .list-group-item,
+.shipping-section .shipping-info {
+    padding: 15px;
+}
+
+.profile-image {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.email-update input,
+.password-update input,
+.shipping-update input {
+    margin-bottom: 20px;
+}
+
+.alert {
+    margin-top: 10px;
+}
+
+.settings-buttons button {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Space between buttons */
+}
+
+.settings-buttons button svg {
+    margin-right: 8px;
+}
+
+.list-group-item {
+    border: none;
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.profile-section {
+    background-color: black;
+    height: 100%;
+    border-radius: 10px;
+}
+.profile-section-title {
+    color: yellow;
+    font-weight: bold;
+    font-size: 3rem;
+    margin-left: 20px;
+}
+.update-form {
+    width: 50%;
+    margin-left: 50px;
+    height: 150px;
+}
+.update-form > h3 {
+    padding: 10px 0px;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.update-form > input {
+    margin-top: 20px;
+}
+
+.profile-Btn {
+    margin: 20px 0px;
+    padding: 10px 10px;
+    background-color: yellow;
+    color: black;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.profile-info > p {
+    width: 50%;
+    margin-left: 50px;
+    font-size: 1.5rem;
+}
+
+.update-form-pswd {
+    width: 50%;
+    margin: 50px 50px;
+    height: 150px;
+}
+.update-form-pswd > h3 {
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 10px 0px;
+}
+.update-form-pswd > input {
+    margin-top: 20px;
+}
+.settings-section-content {
+    background-color: black;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.settings-section-title {
+    color: yellow;
+    font-weight: bold;
+    margin-bottom: 50px;
+    font-size: 3rem;
+    margin-left: 20px;
+}
+.lg-settings-Btn {
+    background-color: #ffaa33;
+    width: 100px;
+    padding: 10px 10px;
+    font-size: 1rem;
+    border-radius: 8px;
+    font-weight: bold;
+    color: black;
+    margin: 10px 30px;
+}
+.del-settings-Btn {
+    background-color: #d70040;
+    width: 200px;
+    color: white;
+    font-weight: bold;
+    padding: 10px 10px;
+    font-size: 1rem;
+    border-radius: 8px;
+    margin: 10px 30px;
+}
+.settings-actions > p {
+    margin: 10px 30px;
+}
+.orders-section-content {
+    background-color: black;
+    border-radius: 10px;
+}
+.orders-section-title {
+    color: yellow;
+    font-weight: bold;
+    margin-bottom: 50px;
+    font-size: 3rem;
+    margin-left: 20px;
+}
+.orders-section-content > li {
+    background-color: blue;
+}
+.orders-section-list-group-item {
+    border: 3px solid yellow;
+    background-color: #212f3d;
+    padding: 20px 20px;
+    width: 80%;
+    margin: auto;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+.shipping-section-content {
+    background-color: black;
+    border-radius: 10px;
+    height: 120%;
+}
+.shipping-section-title {
+    color: yellow;
+    font-weight: bold;
+    margin-bottom: 50px;
+    font-size: 3rem;
+    margin-left: 20px;
+}
+.shipping-details {
+    margin: 10px 30px;
+}
+.shipping-details > p {
+    margin: 10px 30px;
+    font-size: 1.2rem;
+}
